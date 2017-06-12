@@ -7,7 +7,7 @@
   <a href="https://github.com/paulbrom/hmr-redux-mapper">
     <img src="https://raw.githubusercontent.com/paulbrom/hmr-redux-mapper/master/assets/redux-mapper-logo.png">
   </a>
-  <h3><i>The usage mapping command line tool for Redux</i></h3>
+  <h3><i>The usage mapping command line tool for [Redux](http://redux.js.org/)</i></h3>
   <p>&nbsp;</p>
 </div>
 
