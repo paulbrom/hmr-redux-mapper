@@ -2,13 +2,14 @@
 [![NPM version][npm-image]][npm-url]
 [![Build/Test status][travis-image]][travis-url]
 
-
 <div align="center">
   <a href="https://github.com/paulbrom/hmr-redux-mapper">
     <img src="https://raw.githubusercontent.com/paulbrom/hmr-redux-mapper/master/assets/redux-mapper-logo.png">
   </a>
-  <h3><i>The usage mapping command line tool for [Redux](http://redux.js.org/)</i></h3>
-  <p>&nbsp;</p>
+  <h3><i>The usage mapping command line tool for <a href="http://redux.js.org/">Redux</a></i></h3>
+  <h4>
+    <p>&nbsp;</p>
+  </h4>
 </div>
 
 <h2>Why do we need a 'Redux mapper'?</h2>
@@ -199,4 +200,4 @@ Released under the MIT license.
 [travis-url]: http://travis-ci.org/paulbrom/hmr-redux-mapper
 [travis-image]: https://secure.travis-ci.org/paulbrom/hmr-redux-mapper.png?branch=master
 [npm-url]: https://npmjs.org/package/hmr-redux-mapper
-[npm-image]: https://badge.fury.io/js/hmr-redux-mapper.png
+[npm-image]: https://badge.fury.io/js/hmr-redux-mapper.svg
