@@ -2,31 +2,12 @@
 [![NPM version][npm-image]][npm-url]
 [![Build/Test status][travis-image]][travis-url]
 
-<style>
-  .blockImage {
-    display: block;
-  };
-
-  .slogan {
-    margin-top: 0;
-    margin-bottom: 32px;
-  };
-
-  .columnFlex {
-    display: flex;
-    flex-direction: column;
-  };
-
-  .smallText {
-    font-size: small;
-  }
-</style>
 
 <div align="center">
   <a href="https://github.com/paulbrom/hmr-redux-mapper">
-    <img class="blockImage" src="https://raw.githubusercontent.com/paulbrom/hmr-redux-mapper/master/assets/redux-mapper-logo.png">
+    <img style="display:block;" src="https://raw.githubusercontent.com/paulbrom/hmr-redux-mapper/master/assets/redux-mapper-logo.png">
   </a>
-  <h3 class="slogan">The usage mapping command line tool for Redux</h3>
+  <h3 style="margin-top: 0; margin-bottom: 32px;">The usage mapping command line tool for Redux</h3>
 </div>
 
 <h2>Why do we need a 'Redux mapper'?</h2>
@@ -197,10 +178,10 @@ contribution will be greatly appreciated!
 
 <h2>Maintainers</h2>
 
-<div class="columnFlex">
+<div style="display: flex; flex-direction: column;">
   <img width="100" height="100"
     src="https://avatars.githubusercontent.com/paulbrom">
-  <div class="smallFont">
+  <div style="font-size: small;">
     <a href="https://github.com/paulbrom">Paul Broman</a>
     <div>Senior Front-End Engineer</div>
     <div>PureCars/Raycom Media</div>
