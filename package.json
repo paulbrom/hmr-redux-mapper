@@ -1,0 +1,58 @@
+{
+  "name": "hmr-redux-mapper",
+  "author": {
+    "name": "Paul Broman",
+    "company": "PureCars / Raycom Media"
+  },
+  "version": "0.1.0",
+  "description": "A tool to scan for redux reducer usage in UI script files so that the reducers needed by a route can be automatically loaded in HMR scenarios",
+  "main": "dist/project-integration.js",
+  "module": "dist/project-integration.js",
+  "scripts": {},
+  "dependencies": {
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browserify": "^10.1.3",
+    "command-line-args": "^2.1.3",
+    "command-line-usage": "^4.0.0",
+    "del": "^1.2.0",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^6.1.2",
+    "gulp-browserify": "^0.5.1",
+    "gulp-connect": "^2.2.0",
+    "gulp-download": "0.0.1",
+    "gulp-header": "^1.2.2",
+    "gulp-inject": "^1.3.1",
+    "gulp-inline": "0.0.11",
+    "gulp-intercept": "^0.1.0",
+    "gulp-open": "^0.3.2",
+    "gulp-replace-task": "^0.2.1",
+    "gulp-streamify": "0.0.5",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.8",
+    "jasmine": "^2.6.0",
+    "jasmine-console-reporter": "^1.2.7",
+    "js-beautify": "^1.6.2",
+    "karma": "^1.4.1",
+    "karma-browserify": "^4.1.2",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "lodash": "^4.7.0",
+    "phantomjs-prebuilt": "^2.1.14",
+    "vinyl": "^0.4.6",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "vinyl-transform": "^1.0.0"
+  },
+  "keywords": [
+    "redux",
+    "hmr",
+    "mapper"
+  ],
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "babel-polyfill": "^6.23.0"
+  }
+}

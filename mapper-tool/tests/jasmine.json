@@ -1,0 +1,9 @@
+{
+  "spec_dir": "mapper-tool/tests/specs",
+  "spec_files": [
+    "*-spec.js"
+  ],
+  "helpers": [
+  ]
+}
+
