@@ -95,11 +95,9 @@ describe("Integration mapper loader test suite", () => {
       };
 
       return getComponentFromReduxMapper(injectionCur.componentPath)(dummyState, dummyHMRCallback).then(() => {
-        console.error('++ CALLS SEEN:', JSON.stringify(callsSeen));
         validateCalls();
         return validateAllComponentInjections(getComponentFromReduxMapper, injections);
       }).catch((err) => {
-        console.error('++ ERROR CALLS SEEN:', JSON.stringify(callsSeen));
         validateCalls();
         return Promise.resolve(err);
       });

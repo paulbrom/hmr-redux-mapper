@@ -4,9 +4,9 @@
 
 <div align="center">
   <a href="https://github.com/paulbrom/hmr-redux-mapper">
-    <img src="https://raw.githubusercontent.com/paulbrom/hmr-redux-mapper/master/assets/redux-mapper-logo.png">
+    <img style="display:block" src="https://raw.githubusercontent.com/paulbrom/hmr-redux-mapper/master/assets/redux-mapper-logo.png">
   </a>
-  <h3>The usage mapping command line tool for Redux</h3>
+  <h3 style="margin-top: 0; margin-bottom: 32px">The usage mapping command line tool for Redux</h3>
 </div>
 
 <h2>Why do we need a 'Redux mapper'?</h2>
