@@ -180,7 +180,7 @@ contribution will be greatly appreciated!
 <div style="display: flex; flex-direction: column;">
   <img width="100" height="100"
     src="https://avatars.githubusercontent.com/paulbrom">
-  <div>
+  <div style="font-size: small">
     <a href="https://github.com/paulbrom">Paul Broman</a>
     <div>Senior Front-End Engineer</div>
     <div>PureCars/Raycom Media</div>
