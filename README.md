@@ -7,9 +7,7 @@
   <a href="https://github.com/paulbrom/hmr-redux-mapper">
     <img src="https://raw.githubusercontent.com/paulbrom/hmr-redux-mapper/master/assets/redux-mapper-logo.png">
   </a>
-  <div>
-    <font size+"5">The usage mapping command line tool for Redux</font>
-  </div>
+  <h2>_The usage mapping command line tool for Redux_</h2>
   <p>&nbsp;</p>
 </div>
 
@@ -185,11 +183,9 @@ contribution will be greatly appreciated!
   <img width="100" height="100"
     src="https://avatars.githubusercontent.com/paulbrom">
   <div>
-    <font size="3">
-      <a href="https://github.com/paulbrom">Paul Broman</a>
-      <div>Senior Front-End Engineer</div>
-      <div>PureCars/Raycom Media</div>
-    </font>
+    <a href="https://github.com/paulbrom">Paul Broman</a>
+    <div><sub>Senior Front-End Engineer</sub></div>
+    <div><sup>PureCars/Raycom Media</sup></div>
   </div>
 </div>
 
