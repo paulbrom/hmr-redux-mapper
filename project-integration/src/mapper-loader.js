@@ -16,7 +16,9 @@
 //
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
 
-const _ = require('lodash');
+const _each = require('lodash/each');
+const _last = require('lodash/last');
+const _reduce = require('lodash/reduce');
 
 //
 // this is the mapper loader component which is intended to be loaded from inside the childRoutes creation handler in
@@ -80,7 +82,7 @@ const reduxMapperLoader = ({
         const componentMap = reducerMap.containerSpecific[componentPath];
         if (componentMap) {
           // create a promise to load each reducer, as well as a promise to load the component itself
-          Promise.all(_.reduce(componentMap.reducers, (imports, reducerCur) => {
+          Promise.all(_reduce(componentMap.reducers, (imports, reducerCur) => {
             imports.push(reducerCur.importFunc());
             if (reducerCur.sagaImportFunc) {
               imports.push(reducerCur.sagaImportFunc());
@@ -89,14 +91,14 @@ const reduxMapperLoader = ({
           }, []).concat([componentMap.importFunc()])).then(promiseResults => {
             // once all promises are loaded, inject all reducers/sagas
             let resultOn = 0;
-            _.each(componentMap.reducers, reducerCur => {
+            _each(componentMap.reducers, reducerCur => {
               injectReducer(reducerCur.reducerName, promiseResults[resultOn++].default);
               if (reducerCur.sagaImportFunc) {
                 injectSagas(promiseResults[resultOn++].default);
               }
             });
             // finally, load and render the route
-            loadModule(cb)(_.last(promiseResults));
+            loadModule(cb)(_last(promiseResults));
             resolve();
           }).catch((err) => {
             errorLoading(err);

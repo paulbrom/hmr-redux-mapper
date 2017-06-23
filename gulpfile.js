@@ -79,6 +79,7 @@ gulp.task('browserify:dist-integration', ['browserify-integration'], function() 
               "add-module-exports"
           ]
       }))
+      .pipe(uglify())
       .pipe(header(banner, { pkg : pkg } ))
       .pipe(gulp.dest('./dist/'));
 });

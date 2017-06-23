@@ -4,7 +4,7 @@
     "name": "Paul Broman",
     "company": "PureCars / Raycom Media"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A tool to scan for redux reducer usage in UI script files so that the reducers needed by a route can be automatically loaded in HMR scenarios",
   "main": "dist/project-integration.js",
   "module": "dist/project-integration.js",
