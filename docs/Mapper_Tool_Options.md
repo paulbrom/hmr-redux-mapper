@@ -33,22 +33,22 @@ option *basePath* can be specified on the command line either as argument `--bas
 
 <h3>Table of contents</h3>
 
-*. **[basePath](#basePath)**
-*. **[containerPaths](#containerPaths)**
-*. **[coreReducerFilenames](#coreReducerFilenames)**
-*. **[disableCache](#disableCache)**
-*. **[globalReducersOutputPath](#globalReducersOutputPath)**
-*. **[ignorePaths](#ignorePaths)**
-*. **[mainAppPath](#mainAppPath)**
-*. **[showHelp](#showHelp)**
-*. **[reduxPaths](#reduxPaths)**
-*. **[sagaFilename](#sagaFilename)**
-*. **[verboseLogging](#verboseLogging)**
+* **[basePath](#user-content-basePath)**
+* **[containerPaths](#user-content-containerPaths)**
+* **[coreReducerFilenames](#user-content-coreReducerFilenames)**
+* **[disableCache](#user-content-disableCache)**
+* **[globalReducersOutputPath](#user-content-globalReducersOutputPath)**
+* **[ignorePaths](#user-content-ignorePaths)**
+* **[mainAppPath](#user-content-mainAppPath)**
+* **[showHelp](#user-content-showHelp)**
+* **[reduxPaths](#user-content-reduxPaths)**
+* **[sagaFilename](#user-content-sagaFilename)**
+* **[verboseLogging](#user-content-verboseLogging)**
 
-<a name="basePath"><h3>basePath</h3></a>
-Optional|Short Param
---------|-----------
-no|-b
+<h3>basePath</h3>
+Optional | Short Param
+-------- | -----------
+no | -b
 
 `basePath` is used to specify the the path to the root of the project's client-side script JS/JSX files, as compared to
 the root of the project (location of `package.json`).
@@ -65,7 +65,7 @@ If you keep all script files for the project under `app/scripts`, you would spec
 }
 ```
 
-<a name="basePath"><h3>containerPaths</h3></a>
+<h3>containerPaths</h3>
 Optional|Short Param
 --------|-----------
 no|-c
@@ -88,7 +88,7 @@ then that can be specified using `basePath` and `containerPaths` like this:
 }
 ```
 
-<a name="basePath"><h3>coreReducerFilenames</h3></a>
+<h3>coreReducerFilenames</h3>
 Optional|Short Param
 --------|-----------
 yes|-f
@@ -111,7 +111,7 @@ corresponding to that store.  In that case, you can specify that structure like 
 }
 ```
 
-<a name="basePath"><h3>disableCache</h3></a>
+<h3>disableCache</h3>
 Optional|Short Param
 --------|-----------
 yes|-d
@@ -120,7 +120,7 @@ yes|-d
 cause the mapper tool to take much longer to execute.  This option is useful for debugging the redux mapper tool itself
 and should not need to be specified in an integration.
 
-<a name="basePath"><h3>globalReducersOutputPath</h3></a>
+<h3>globalReducersOutputPath</h3>
 Optional|Short Param
 --------|-----------
 no|-g
@@ -145,7 +145,7 @@ and `globalReducersOutputPath` like this:
 }
 ```
 
-<a name="basePath"><h3>ignorePaths</h3></a>
+<h3>ignorePaths</h3>
 Optional|Short Param
 --------|-----------
 yes|-i
@@ -167,7 +167,7 @@ to bloat in `reducerMap.js` like this:
 }
 ```
 
-<a name="basePath"><h3>mainAppPath</h3></a>
+<h3>mainAppPath</h3>
 Optional|Short Param
 --------|-----------
 no|-a
@@ -191,7 +191,7 @@ and `mainAppPath` like this:
 }
 ```
 
-<a name="basePath"><h3>showHelp</h3></a>
+<h3>showHelp</h3>
 Optional|Short Param
 --------|-----------
 yes|-h
@@ -223,7 +223,7 @@ and `reducerMapOutputPath` like this:
 }
 ```
 
-<a name="basePath"><h3>reduxPaths</h3></a>
+<h3>reduxPaths</h3>
 Optional|Short Param
 --------|-----------
 no|-r
@@ -247,7 +247,7 @@ reducers are found under `app/scripts/redux`, then that can be specified using `
 }
 ```
 
-<a name="basePath"><h3>sagaFilename</h3></a>
+<h3>sagaFilename</h3>
 Optional|Short Param
 --------|-----------
 yes|-s
@@ -269,7 +269,7 @@ which is used to contain redux sagas, you can specify that structure like this:
 }
 ```
 
-<a name="basePath"><h3>verboseLogging</h3></a>
+<h3>verboseLogging</h3>
 Optional|Short Param
 --------|-----------
 yes|-h
