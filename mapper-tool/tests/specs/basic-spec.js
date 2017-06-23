@@ -22,6 +22,7 @@ function execHMRTool(path, options) {
   if (options.debug) {
     args += ' -v';
   }
+  args += options.otherArgs || '';
   execSync(`node bin/hmr-redux-mapper ${args}`, options.debug ? { stdio:[0,1,2] } : undefined);
 }
 
@@ -34,19 +35,32 @@ function compareResults(path) {
 }
 
 describe("Reducer detection test suite", function() {
-  it("find reducer usage in the simple combined test case", function() {
-    execHMRTool('simple-combined');
-    expect(compareResults('simple-combined')).toBe(true);
+  const TEST_SIMPLE_COMBINED = 'simple-combined';
+  const TEST_SIMPLE_SEPARATED = 'simple-separated';
+  const TEST_COMPLEX_SEPARATED = 'complex-separated';
+  const TEST_FILE_PATH_IGNORES = 'file-path-ignores';
+
+  it(`find reducer usage in the ${TEST_SIMPLE_COMBINED} test case`, function() {
+    execHMRTool(TEST_SIMPLE_COMBINED);
+    expect(compareResults(TEST_SIMPLE_COMBINED)).toBe(true);
   });
 
-  it("find reducer usage in the simple separated test case", function() {
-    execHMRTool('simple-separated', { reduxSeparated: true });
-    expect(compareResults('simple-separated')).toBe(true);
+  it(`find reducer usage in the ${TEST_SIMPLE_SEPARATED} test case`, function() {
+    execHMRTool(TEST_SIMPLE_SEPARATED, { reduxSeparated: true });
+    expect(compareResults(TEST_SIMPLE_SEPARATED)).toBe(true);
   });
 
-  it("find reducer usage in the complex separated test case", function() {
-    execHMRTool('complex-separated', { reduxSeparated: true });
-    expect(compareResults('complex-separated')).toBe(true);
+  it(`find reducer usage in the ${TEST_COMPLEX_SEPARATED} test case`, function() {
+    execHMRTool(TEST_COMPLEX_SEPARATED, { reduxSeparated: true });
+    expect(compareResults(TEST_COMPLEX_SEPARATED)).toBe(true);
+  });
+
+  it(`find reducer usage in the ${TEST_FILE_PATH_IGNORES} test case`, function() {
+    execHMRTool(TEST_FILE_PATH_IGNORES, {
+      reduxSeparated: true,
+      otherArgs: ' -i "d????a"',
+    });
+    expect(compareResults(TEST_FILE_PATH_IGNORES)).toBe(true);
   });
 
 });

@@ -2,7 +2,7 @@
 //
 //  hmrReduxMapper - the automatic hmr component loader for redux
 //  (c)2017 PureCars / Raycom Media
-//  ADD GITHUB HERE
+//  https://github.com/paulbrom/hmr-redux-mapper
 //
 //    main contributors:
 //      Paul Broman (p.broman@yahoo.com)

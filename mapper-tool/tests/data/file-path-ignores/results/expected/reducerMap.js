@@ -9,7 +9,7 @@ module.exports =
     "importFunc": function()
     {
       return System.import(
-        'mapper-tool/tests/data/simple-combined/components/store2_reducer'
+        'mapper-tool/tests/data/file-path-ignores/redux/store2/reducer'
       );
     }
   }],
@@ -29,7 +29,7 @@ module.exports =
         "importFunc": function()
         {
           return System.import(
-            'mapper-tool/tests/data/simple-combined/components/store1_reducer'
+            'mapper-tool/tests/data/file-path-ignores/redux/store1/reducer'
           );
         }
       }]
@@ -48,7 +48,7 @@ module.exports =
         "importFunc": function()
         {
           return System.import(
-            'mapper-tool/tests/data/simple-combined/components/store1_reducer'
+            'mapper-tool/tests/data/file-path-ignores/redux/store1/reducer'
           );
         }
       }]
@@ -67,7 +67,7 @@ module.exports =
         "importFunc": function()
         {
           return System.import(
-            'mapper-tool/tests/data/simple-combined/components/store1_reducer'
+            'mapper-tool/tests/data/file-path-ignores/redux/store1/reducer'
           );
         }
       },
@@ -76,7 +76,7 @@ module.exports =
         "importFunc": function()
         {
           return System.import(
-            'mapper-tool/tests/data/simple-combined/components/store3_reducer'
+            'mapper-tool/tests/data/file-path-ignores/redux/store3/reducer'
           );
         }
       }]
