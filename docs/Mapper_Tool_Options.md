@@ -33,22 +33,22 @@ option *basePath* can be specified on the command line either as argument `--bas
 
 <h3>Table of contents</h3>
 
-* **[basePath](#user-content-basePath)**
-* **[containerPaths](#user-content-containerPaths)**
-* **[coreReducerFilenames](#user-content-coreReducerFilenames)**
-* **[disableCache](#user-content-disableCache)**
-* **[globalReducersOutputPath](#user-content-globalReducersOutputPath)**
-* **[ignorePaths](#user-content-ignorePaths)**
-* **[mainAppPath](#user-content-mainAppPath)**
-* **[showHelp](#user-content-showHelp)**
-* **[reduxPaths](#user-content-reduxPaths)**
-* **[sagaFilename](#user-content-sagaFilename)**
-* **[verboseLogging](#user-content-verboseLogging)**
+* **[basePath](#user-content-basepath)**
+* **[containerPaths](#user-content-containerpaths)**
+* **[coreReducerFilenames](#user-content-coreReducerfilenames)**
+* **[disableCache](#user-content-disablecache)**
+* **[globalReducersOutputPath](#user-content-globalreducersoutputpath)**
+* **[ignorePaths](#user-content-ignorepaths)**
+* **[mainAppPath](#user-content-mainapppath)**
+* **[showHelp](#user-content-showhelp)**
+* **[reduxPaths](#user-content-reduxpaths)**
+* **[sagaFilename](#user-content-sagafilename)**
+* **[verboseLogging](#user-content-verboselogging)**
 
 <h3>basePath</h3>
-Optional | Short Param
--------- | -----------
-no | -b
+|Optional|Short Param|
+|--------|-----------|
+|no|-b|
 
 `basePath` is used to specify the the path to the root of the project's client-side script JS/JSX files, as compared to
 the root of the project (location of `package.json`).
