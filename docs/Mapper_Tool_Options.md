@@ -46,6 +46,7 @@ option *basePath* can be specified on the command line either as argument `--bas
 * **[verboseLogging](#user-content-verboselogging)**
 
 <h3>basePath</h3>
+
 |Optional|Short Param|
 |:------:|:---------:|
 |no      |-b         |
