@@ -45,6 +45,8 @@ option *basePath* can be specified on the command line either as argument `--bas
 * **[sagaFilename](#user-content-sagafilename)**
 * **[verboseLogging](#user-content-verboselogging)**
 
+---
+
 <h3>basePath</h3>
 
 |Optional|Short Param|
@@ -65,6 +67,8 @@ If you keep all script files for the project under `app/scripts`, you would spec
   }
 }
 ```
+
+---
 
 <h3>containerPaths</h3>
 
@@ -90,6 +94,8 @@ then that can be specified using `basePath` and `containerPaths` like this:
 }
 ```
 
+---
+
 <h3>coreReducerFilenames</h3>
 
 |Optional|Short Param|
@@ -113,6 +119,8 @@ corresponding to that store.  In that case, you can specify that structure like 
   }
 }
 ```
+
+---
 
 <h3>disableCache</h3>
 
@@ -150,6 +158,8 @@ and `globalReducersOutputPath` like this:
 }
 ```
 
+---
+
 <h3>ignorePaths</h3>
 
 |Optional|Short Param|
@@ -172,6 +182,8 @@ to bloat in `reducerMap.js` like this:
   }
 }
 ```
+
+---
 
 <h3>mainAppPath</h3>
 
@@ -197,6 +209,8 @@ and `mainAppPath` like this:
   }
 }
 ```
+
+---
 
 <h3>showHelp</h3>
 
@@ -232,6 +246,8 @@ and `reducerMapOutputPath` like this:
 }
 ```
 
+---
+
 <h3>reduxPaths</h3>
 
 |Optional|Short Param|
@@ -257,6 +273,8 @@ reducers are found under `app/scripts/redux`, then that can be specified using `
 }
 ```
 
+---
+
 <h3>sagaFilename</h3>
 
 |Optional|Short Param|
@@ -279,6 +297,8 @@ which is used to contain redux sagas, you can specify that structure like this:
   }
 }
 ```
+
+---
 
 <h3>verboseLogging</h3>
 
