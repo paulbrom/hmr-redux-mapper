@@ -67,9 +67,10 @@ If you keep all script files for the project under `app/scripts`, you would spec
 ```
 
 <h3>containerPaths</h3>
-Optional|Short Param
---------|-----------
-no|-c
+
+|Optional|Short Param|
+|:------:|:---------:|
+|no      |-c         |
 
 `containerPaths` is used to specify a comma-delimited list of paths to any folders which can contain top-level
 containers which can be swapped by a hot module reload.  Any JS files under those folders will be *mapped* by the
@@ -90,9 +91,10 @@ then that can be specified using `basePath` and `containerPaths` like this:
 ```
 
 <h3>coreReducerFilenames</h3>
-Optional|Short Param
---------|-----------
-yes|-f
+
+|Optional|Short Param|
+|:------:|:---------:|
+|yes     |-f         |
 
 If you keep all redux files related to a single redux store in the same folder, and don't place other script unrelated
 to the redux store in that same folder, and use a standard set of filenames in all your redux stores, then you can
@@ -113,18 +115,20 @@ corresponding to that store.  In that case, you can specify that structure like 
 ```
 
 <h3>disableCache</h3>
-Optional|Short Param
---------|-----------
-yes|-d
+
+|Optional|Short Param|
+|:------:|:---------:|
+|yes     |-d         |
 
 `disableCache` is used to disable the internal file caching used in the redux mapper tool.  Disabling this cache will
 cause the mapper tool to take much longer to execute.  This option is useful for debugging the redux mapper tool itself
 and should not need to be specified in an integration.
 
 <h3>globalReducersOutputPath</h3>
-Optional|Short Param
---------|-----------
-no|-g
+
+|Optional|Short Param|
+|:------:|:---------:|
+|no      |-g         |
 
 `globalReducersOutputPath` is used to specify the the path to output a file, typically named `globalReducers.js`, which
 can be imported to import all the reducers used globally (that is, all reducers used by the component specified at
@@ -147,9 +151,10 @@ and `globalReducersOutputPath` like this:
 ```
 
 <h3>ignorePaths</h3>
-Optional|Short Param
---------|-----------
-yes|-i
+
+|Optional|Short Param|
+|:------:|:---------:|
+|yes     |-i         |
 
 `ignorePaths` is used to specify any paths or filenames to ignore when mapping components for redux usage.  The string
 will be treated as a Javascript regular expression.
@@ -169,9 +174,10 @@ to bloat in `reducerMap.js` like this:
 ```
 
 <h3>mainAppPath</h3>
-Optional|Short Param
---------|-----------
-no|-a
+
+|Optional|Short Param|
+|:------:|:---------:|
+|no      |-a         |
 
 `mainAppPath` is used to specify the the path to the root component of your application that is always loaded (never
 swapped out by hot module reloads).  The path specified is relative to the path specified in `basePath`.  Any reducers
@@ -193,17 +199,19 @@ and `mainAppPath` like this:
 ```
 
 <h3>showHelp</h3>
-Optional|Short Param
---------|-----------
-yes|-h
+
+|Optional|Short Param|
+|:------:|:---------:|
+|yes     |-h         |
 
 `showHelp` can be used at command line, when running the redux-mapper tool, to show information on how to use the tool,
 similar to what you are reading here.
 
 <h3>reducerMapOutputPath</h3>
-Optional|Short Param
---------|-----------
-no|-g
+
+|Optional|Short Param|
+|:------:|:---------:|
+|no      |-g         |
 
 `reducerMapOutputPath` is used to specify the the path to output a file, typically named `reducerMap.js`, which is
 consumed by the integration module to determine which files need to swapped in on route change.
@@ -225,9 +233,10 @@ and `reducerMapOutputPath` like this:
 ```
 
 <h3>reduxPaths</h3>
-Optional|Short Param
---------|-----------
-no|-r
+
+|Optional|Short Param|
+|:------:|:---------:|
+|no      |-r         |
 
 `reduxPaths` is used to specify a comma-delimited set of paths in your project where redux reducer files can be found.
 Depending on the structure of your project, this can be same as what you specify for `containerPaths`.
@@ -249,9 +258,10 @@ reducers are found under `app/scripts/redux`, then that can be specified using `
 ```
 
 <h3>sagaFilename</h3>
-Optional|Short Param
---------|-----------
-yes|-s
+
+|Optional|Short Param|
+|:------:|:---------:|
+|yes     |-s         |
 
 If you keep all redux files related to a single redux store in the same folder, and use redux sagas, and always use the
 same filename to contain any redux sagas, then you can specify this option to avoid the need to specify a
@@ -271,10 +281,10 @@ which is used to contain redux sagas, you can specify that structure like this:
 ```
 
 <h3>verboseLogging</h3>
-Optional|Short Param
---------|-----------
-yes|-h
+
+|Optional|Short Param|
+|:------:|:---------:|
+|yes     |-h         |
 
 `verboseLogging` can be used to turn on verbose output from the tool.  This is useful for debugging either integration
 problems or bugs in the redux mapper tool itself.
-
