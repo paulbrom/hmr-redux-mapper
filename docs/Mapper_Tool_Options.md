@@ -47,8 +47,8 @@ option *basePath* can be specified on the command line either as argument `--bas
 
 <h3>basePath</h3>
 |Optional|Short Param|
-|--------|-----------|
-|no|-b|
+|:------:|:---------:|
+|no      |-b         |
 
 `basePath` is used to specify the the path to the root of the project's client-side script JS/JSX files, as compared to
 the root of the project (location of `package.json`).
