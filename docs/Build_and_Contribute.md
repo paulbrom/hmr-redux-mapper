@@ -85,7 +85,7 @@ tests (which are conventional [Jasmine](https://jasmine.github.io/) unit tests) 
 
 <h4>Special note about unit testing the reduxMapperLoader</h4>
 
-While the reduxMapperLoader does use conventional Jasmine unit tests, the calls made by `getComponentFromReduxMapper`
+While the reduxMapperLoader does use conventional Jasmine unit tests, calls made by `getComponentFromReduxMapper`
 to various functions like `loadModule`, `injectReducer` and `injectSaga` are recorded in a `callsSeen` array whose
 calls are verified in the unit test.  This means that if you change the behavior of the redux-mapper when it comes to
 making these calls, or change the unit test data referred to by the mapper (the reducer map from the **simple-combined**
