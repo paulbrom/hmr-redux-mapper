@@ -64,7 +64,7 @@ it(`find reducer usage in the ${FOO_TEST} test case`, function() {
 });
 ```
 
-`execHMRTool` constructs a number of command line arguments for the redux mapper tool based on the options passed in
+`execHMRTool` constructs a number of command line arguments for the redux-mapper tool based on the options passed in
 and then executes the tool.  Please inspect that function to see if it meets your specific test needs as far as what
 arguments are supplied to the tool.
 
@@ -82,6 +82,14 @@ code change to produce.  You can then implement your change and once it is good,
 The reduxMapperLoader module that is used to assist with importing of containers and their redux dependencies on hot
 module reload swap is found under the `project-integration` folder.  The source code is in the `src` subolder and the
 tests (which are conventional [Jasmine](https://jasmine.github.io/) unit tests) are found in the `tests` subfolder.
+
+<h4>Special note about unit testing the reduxMapperLoader</h4>
+
+While the reduxMapperLoader does use conventional Jasmine unit tests, the calls made by the `getComponentFromReduxMapper`
+to various functions like `loadModule`, `injectReducer` and `injectSaga` are recorded in a `callsSeen` array whose
+calls are verified in the unit test.  This means that if you change the behavior of the redux-mapper when it comes to
+making these calls, or change the unit test data referred to by the mapper (the reducer map from the **simple-combined**
+mapper-tool test), then those calls will need to be adjusted.
 
 <h3>Rules for contributors</h3>
 
