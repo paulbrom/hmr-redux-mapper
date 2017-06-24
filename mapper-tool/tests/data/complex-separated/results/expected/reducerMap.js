@@ -48,6 +48,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store2/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store2/sagas'
+          );
         }
       },
       {
@@ -56,6 +62,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store5/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store5/sagas'
           );
         }
       },
@@ -84,6 +96,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store9/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store9/sagas'
+          );
         }
       }]
     },
@@ -103,6 +121,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store2/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store2/sagas'
+          );
         }
       },
       {
@@ -111,6 +135,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store5/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store5/sagas'
           );
         }
       },
@@ -129,6 +159,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store9/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store9/sagas'
           );
         }
       }]
@@ -158,6 +194,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store2/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store2/sagas'
+          );
         }
       },
       {
@@ -166,6 +208,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store5/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store5/sagas'
           );
         }
       },
@@ -193,6 +241,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store9/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store9/sagas'
           );
         }
       }]
@@ -222,6 +276,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store2/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store2/sagas'
+          );
         }
       },
       {
@@ -231,6 +291,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store3/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store3/sagas'
+          );
         }
       },
       {
@@ -239,6 +305,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store5/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store5/sagas'
           );
         }
       },
@@ -266,6 +338,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store9/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store9/sagas'
           );
         }
       }]
@@ -295,6 +373,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store2/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store2/sagas'
+          );
         }
       },
       {
@@ -304,6 +388,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store3/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store3/sagas'
+          );
         }
       },
       {
@@ -312,6 +402,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store5/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store5/sagas'
           );
         }
       },
@@ -339,6 +435,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store9/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store9/sagas'
           );
         }
       }]
@@ -368,6 +470,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store2/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store2/sagas'
+          );
         }
       },
       {
@@ -377,6 +485,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store3/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store3/sagas'
+          );
         }
       },
       {
@@ -385,6 +499,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store5/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store5/sagas'
           );
         }
       },
@@ -412,6 +532,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store9/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store9/sagas'
           );
         }
       }]
@@ -441,6 +567,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store2/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store2/sagas'
+          );
         }
       },
       {
@@ -450,6 +582,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store3/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store3/sagas'
+          );
         }
       },
       {
@@ -458,6 +596,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store5/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store5/sagas'
           );
         }
       },
@@ -485,6 +629,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store9/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store9/sagas'
           );
         }
       }]
@@ -514,6 +664,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store2/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store2/sagas'
+          );
         }
       },
       {
@@ -523,6 +679,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store3/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store3/sagas'
+          );
         }
       },
       {
@@ -531,6 +693,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store5/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store5/sagas'
           );
         }
       },
@@ -558,6 +726,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store9/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store9/sagas'
           );
         }
       }]
@@ -587,6 +761,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store2/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store2/sagas'
+          );
         }
       },
       {
@@ -596,6 +776,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store3/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store3/sagas'
+          );
         }
       },
       {
@@ -604,6 +790,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store5/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store5/sagas'
           );
         }
       },
@@ -631,6 +823,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store9/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store9/sagas'
           );
         }
       }]
@@ -660,6 +858,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store2/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store2/sagas'
+          );
         }
       },
       {
@@ -669,6 +873,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store3/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store3/sagas'
+          );
         }
       },
       {
@@ -677,6 +887,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store5/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store5/sagas'
           );
         }
       },
@@ -704,6 +920,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store9/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store9/sagas'
           );
         }
       }]
@@ -733,6 +955,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store2/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store2/sagas'
+          );
         }
       },
       {
@@ -742,6 +970,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store3/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store3/sagas'
+          );
         }
       },
       {
@@ -750,6 +984,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store5/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store5/sagas'
           );
         }
       },
@@ -777,6 +1017,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store9/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store9/sagas'
           );
         }
       }]
@@ -806,6 +1052,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store2/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store2/sagas'
+          );
         }
       },
       {
@@ -823,6 +1075,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/complex-separated/redux/store9/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/complex-separated/redux/store9/sagas'
           );
         }
       }]

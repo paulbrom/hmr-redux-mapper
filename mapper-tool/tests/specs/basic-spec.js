@@ -15,7 +15,7 @@ function execHMRTool(path, options) {
   clearResults(path);
   var args = `-b mapper-tool/tests/data/${path} -a app.jsx -c containers -g results/globalReducers.js -m results/reducerMap.js`;
   if (options.reduxSeparated) {
-    args += ' -f actions.js -r redux';
+    args += ' -r redux -f actions.js -s sagas.js';
   } else {
     args += ' -r components';
   }

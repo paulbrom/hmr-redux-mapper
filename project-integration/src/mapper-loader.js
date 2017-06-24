@@ -17,6 +17,7 @@
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
 
 const _each = require('lodash/each');
+const _isArray = require('lodash/isArray');
 const _last = require('lodash/last');
 const _reduce = require('lodash/reduce');
 
@@ -69,6 +70,10 @@ const reduxMapperLoader = ({
   };
   injectReducer = injectReducer || injectAsyncReducerDefault;
   const injectAsyncSagasDefault = (asyncSagas) => {
+    if (!_isArray(asyncSagas)) {
+      // this is to cope with a unit test issue...
+      asyncSagas = [asyncSagas];
+    }
     asyncSagas.map(store.runSaga);
   };
   injectSagas = injectSagas || injectAsyncSagasDefault;

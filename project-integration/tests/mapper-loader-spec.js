@@ -193,6 +193,9 @@ describe("Integration mapper loader test suite", () => {
         path: 'mapper-tool/tests/data/simple-combined/components/store3_reducer',
       }, {
         type: 'import',
+        path: 'mapper-tool/tests/data/simple-combined/components/store3_sagas',
+      }, {
+        type: 'import',
         path: './containers/container3',
       }, {
         type: 'createReducer',
@@ -217,6 +220,9 @@ describe("Integration mapper loader test suite", () => {
           store1: 'mapper-tool/tests/data/simple-combined/components/store1_reducer',
           store3: 'mapper-tool/tests/data/simple-combined/components/store3_reducer',
         },
+      }, {
+        type: 'runSaga',
+        saga: 'mapper-tool/tests/data/simple-combined/components/store3_sagas',
       }, {
         type: 'dummyHMRCallback',
         componentModule: './containers/container3',
@@ -282,6 +288,9 @@ describe("Integration mapper loader test suite", () => {
         path: 'mapper-tool/tests/data/simple-combined/components/store3_reducer',
       }, {
         type: 'import',
+        path: 'mapper-tool/tests/data/simple-combined/components/store3_sagas',
+      }, {
+        type: 'import',
         path: './containers/container3',
       }, {
         type: 'injectReducerCustom',
@@ -291,6 +300,9 @@ describe("Integration mapper loader test suite", () => {
         type: 'injectReducerCustom',
         name: 'store3',
         asyncReducer: 'mapper-tool/tests/data/simple-combined/components/store3_reducer',
+      }, {
+        type: 'injectSagasCustom',
+        asyncSagas: 'mapper-tool/tests/data/simple-combined/components/store3_sagas',
       }, {
         type: 'loadModuleCustom',
         componentModule: {

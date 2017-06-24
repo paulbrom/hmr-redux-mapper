@@ -35,6 +35,7 @@ const IGNORE_EXTENSIONS = "jpg,jpeg,png,gif";
 // regular expressions
 const REGEX_REDUCER_DEFINITION = /PRM_REDUCER_NAME\s+=\s+['"]([^'"]*)['"]/; // used to find a reducer definition file
 const REGEX_ACTION_DEFINITION = /PRM_ACTION_FILE_FOR_REDUCER\s+=\s+['"]([^'"]*)['"]/; // used to find an action file related to a reducer
+const REGEX_SAGA_DEFINITION = /PRM_SAGA_FILE_FOR_REDUCER\s+=\s+['"]([^'"]*)['"]/; // used to find an action file related to a reducer
 const REGEX_ALL_IMPORTS = /import [^;]* from ['"][^'"]*['"];/gm;            // used to find all imports in a given file
 const REGEX_DECONSTRUCT_IMPORT = /import ([^;]*) from ['"]([^'"]*)['"];/m;  // used to deconstruct a single import
 const REGEX_IMPORT_MODULES = /[^{]*{([^}]*)}/m;                             // used to deconstruct an import brace block { } into individual requested modules
@@ -135,7 +136,7 @@ const COMMAND_LINE_ARGS = [
     alias: 's',
     type: String,
     typeLabel: '[underline]{filename}',
-    description: '(optional) if you use sagas, this is the filename where all sagas will be contained (e.g., sagas.js).',
+    description: '(optional) if you use sagas, this is the filename where all sagas will be contained (e.g., sagas.js).  If you don\'t use sagas, specify empty string for better performance',
   },
   {
     name: 'verboseLogging',
@@ -206,6 +207,7 @@ class HMR_ReduxMapper {
   constructor() {
     this._opts = cliArgs(COMMAND_LINE_ARGS).parse();
     this._reducers = [];
+    this._sagaFilenames = {};
     this._cache = {};
     this._totalReducerUsagesFound = 0;
     this._totalFilesScanned = 0;
@@ -370,15 +372,28 @@ class HMR_ReduxMapper {
   // this method finds all reducer definitions in the given folder
   _findReducerDefinitions(folder) {
     const reducers = [];
+
+    // must prescan for saga filenames if not predefined
+    if (!this._opts.sagaFilename && (this._opts.sagaFilename !== '')) {
+      this._execOnAllFilesRecursive(folder, fileCur => {
+        const fileContents = fs.readFileSync(fileCur, 'utf8');
+        const sagaMatch = fileContents.match(REGEX_SAGA_DEFINITION);
+        if (sagaMatch) {
+          this._sagaFilenames[sagaMatch[1]] = path.basename(fileCur);
+        }
+      });
+    }
+
     this._execOnAllFilesRecursive(folder, fileCur => {
       const fileContents = fs.readFileSync(fileCur, 'utf8');
       const nameMatch = fileContents.match(REGEX_REDUCER_DEFINITION);
       if (nameMatch && nameMatch.length > 1) {
         const reducerName = nameMatch[1];
         const reducerPathMunged = fileCur.replace(this._getBasePath(path.dirname(this._opts.reducerMapOutputPath)), '.');
-        const sagaPath = this._opts.sagaFilename && fileCur.replace(/\/[^\/]*$/, `/${this._opts.sagaFilename}`);
-        const hasSagas = this._opts.sagaFilename && fs.existsSync(sagaPath);
-        const sagaPathMunged = this._opts.sagaFilename &&
+        const sagaFilename = (this._opts.sagaFilename || this._sagaFilenames[reducerName]);
+        const sagaPath = sagaFilename && fileCur.replace(/\/[^\/]*$/, `/${sagaFilename}`);
+        const hasSagas = sagaFilename && fs.existsSync(sagaPath);
+        const sagaPathMunged = sagaFilename &&
           sagaPath.replace(this._getBasePath(path.dirname(this._opts.reducerMapOutputPath)), '.');
         reducers.push({
           reducerName,

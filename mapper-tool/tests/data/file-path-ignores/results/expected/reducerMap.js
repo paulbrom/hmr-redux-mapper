@@ -31,6 +31,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/file-path-ignores/redux/store1/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/file-path-ignores/redux/store1/sagas'
+          );
         }
       }]
     },
@@ -49,6 +55,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/file-path-ignores/redux/store1/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/file-path-ignores/redux/store1/sagas'
           );
         }
       }]
@@ -69,6 +81,12 @@ module.exports =
           return System.import(
             'mapper-tool/tests/data/file-path-ignores/redux/store1/reducer'
           );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/file-path-ignores/redux/store1/sagas'
+          );
         }
       },
       {
@@ -77,6 +95,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/file-path-ignores/redux/store3/reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/file-path-ignores/redux/store3/sagas'
           );
         }
       }]

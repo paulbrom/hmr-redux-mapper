@@ -11,6 +11,12 @@ module.exports =
       return System.import(
         'mapper-tool/tests/data/simple-combined/components/store2_reducer'
       );
+    },
+    "sagaImportFunc": function()
+    {
+      return System.import(
+        'mapper-tool/tests/data/simple-combined/components/store2_sagas'
+      );
     }
   }],
   "containerSpecific":
@@ -77,6 +83,12 @@ module.exports =
         {
           return System.import(
             'mapper-tool/tests/data/simple-combined/components/store3_reducer'
+          );
+        },
+        "sagaImportFunc": function()
+        {
+          return System.import(
+            'mapper-tool/tests/data/simple-combined/components/store3_sagas'
           );
         }
       }]
