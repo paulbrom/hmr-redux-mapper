@@ -1,11 +1,11 @@
 # Mapper Tool Configuration Options
 
-The redux mapper tool accepts a set of configuration options.  These configuration options can be specified either by
+The redux-mapper tool accepts a set of configuration options.  These configuration options can be specified either by
 using a `redux-mapper.json` configuration file (the preferred way) or by supplying command line arguments directly to
 the tool script when invoking it with *node*.
 
-The preferred way to configure the redux mapper tool is to create a `redux-mapper.json` file in the root folder of your
-project (same location as `package.json`).  Any of the redux mapper configuration options can be specified as a member
+The preferred way to configure the redux-mapper tool is to create a `redux-mapper.json` file in the root folder of your
+project (same location as `package.json`).  Any of the redux-mapper configuration options can be specified as a member
 of the `config` JSON object with the argument name as the key.
 
 For example, mapper tool configuration option `basePath` can be specified as `foo` either directly on the command line
@@ -35,7 +35,7 @@ option *basePath* can be specified on the command line either as argument `--bas
 
 * **[basePath](#user-content-basepath)**
 * **[containerPaths](#user-content-containerpaths)**
-* **[coreReducerFilenames](#user-content-coreReducerfilenames)**
+* **[actionFilenames](#user-content-coreReducerfilenames)**
 * **[disableCache](#user-content-disablecache)**
 * **[globalReducersOutputPath](#user-content-globalreducersoutputpath)**
 * **[ignorePaths](#user-content-ignorepaths)**
@@ -96,7 +96,7 @@ then that can be specified using `basePath` and `containerPaths` like this:
 
 ---
 
-<h3>coreReducerFilenames</h3>
+<h3>actionFilenames</h3>
 
 |Optional|Short Param|
 |:------:|:---------:|
@@ -104,16 +104,16 @@ then that can be specified using `basePath` and `containerPaths` like this:
 
 If you keep all redux files related to a single redux store in the same folder, and don't place other script unrelated
 to the redux store in those same folders, and use a standard set of filenames in all your redux stores, then you can
-specify this option to avoid the need to specify a *PRM_FILES_FOR_REDUCER_NAME* in your redux store-related files that
-can be imported from a component or container, like action files.  Files which are not directly referenced from
-components or containers, like reducer files, do not need to be specified here.
+specify this option to avoid the need to specify a *PRM_ACTION_FILE_FOR_REDUCER* in your redux store-related files
+that can invoke an action.  Files which are not directly involved in invoking (not handling) an action, from a
+component or container, like reducer files or saga files, do not need to be specified here.
 
 <h5>Example:</h5>
 
 Let's say that all your redux stores are each in their own separate folders, and each has a file called `actions.js`
 which is used to import redux actions, and maybe also optionally a `helpers.js` containing utility functions
-corresponding to that store which can be used directly from components or containers.  In that case, you can specify
-that structure like this:
+corresponding to that store which can potentially invoke actions and be used directly from components or containers.
+In that case, you can specify hat structure like this:
 
 ``` javascript
 {
@@ -131,8 +131,8 @@ that structure like this:
 |:------:|:---------:|
 |yes     |-d         |
 
-`disableCache` is used to disable the internal file caching used in the redux mapper tool.  Disabling this cache will
-cause the mapper tool to take much longer to execute.  This option is useful for debugging the redux mapper tool itself
+`disableCache` is used to disable the internal file caching used in the redux-mapper tool.  Disabling this cache will
+cause the mapper tool to take much longer to execute.  This option is useful for debugging the redux-mapper tool itself
 and should not need to be specified in an integration.
 
 ---
@@ -315,4 +315,4 @@ which is used to contain redux sagas, you can specify that structure like this:
 |yes     |-h         |
 
 `verboseLogging` can be used to turn on verbose output from the tool.  This is useful for debugging either integration
-problems or bugs in the redux mapper tool itself.
+problems or bugs in the redux-mapper tool itself.
