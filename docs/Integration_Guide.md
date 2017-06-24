@@ -9,7 +9,7 @@ to volunteer to add such support, please see the contributing file for more deta
 
 The redux-mapper needs to be configured so that it can find:
 
-* All the script related to each individually swappable reducer module.
+* All the script related to each individually swappable reducer module
 * All the individually swappable containers (separated by route)
 * The main container of your application, which cannot be swapped (and usually contains global redux stores)
 
@@ -302,4 +302,4 @@ In the event of problems, you can turn on verbose logging fro the tool by specif
 
 If you are still stumped, feel free to reach out to me directly at paulb@purecars.com.
 
- <h2>GOOD LUCK!!</h2>
+<h3>GOOD LUCK!!</h3>

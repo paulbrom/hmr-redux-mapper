@@ -173,7 +173,7 @@ All of the necessary Redux modules and the React component itself will be inject
 `getCompoenntFromReduxMapper`, using the data collected by the build tool.
 
 <h3>For more information, see the full, more detailed integration guide
-[here](https://github.com/paulbrom/hmr-redux-mapper/blob/master/docs/Integration_Guide.md)</h3>
+<a href="https://github.com/paulbrom/hmr-redux-mapper/blob/master/docs/Integration_Guide.md">here</h3>
 
 <h2>Contributing</h2>
 
