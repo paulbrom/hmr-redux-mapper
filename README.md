@@ -181,6 +181,9 @@ Don't hesitate to create a pull request.  Right now we only offer direct support
 react-router, and we hope that the community can help integrate this tool with other Redux HMR environments.  Any
 contribution will be greatly appreciated!
 
+<h3>For more information on how to build, run, and create tests, click
+<a href="https://github.com/paulbrom/hmr-redux-mapper/blob/master/docs/Build_and_Contribute.md">here</h3>
+
 <h2>Maintainers</h2>
 
 <div>

@@ -3,7 +3,8 @@
 Please note that at this time, **the redux-mapper is only designed to integrate closely with [React](https://facebook.github.io/react/)**,
 specifically with [react-router](https://github.com/ReactTraining/react-router).   In the future, documentation for
 integration with other Redux implementations will be included as support for them becomes available.  If you would like
-to volunteer to add such support, please see the contributing file for more details.
+to volunteer to add such support, please see [this](https://github.com/paulbrom/hmr-redux-mapper/blob/master/docs/Build_and_Contribute.md)
+documentation for more details on how to contribute changes to this project.
 
 <h3>What does the redux-mapper need to know about your project?</h3>
 
