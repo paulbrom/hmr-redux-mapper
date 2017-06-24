@@ -74,8 +74,9 @@ Here is an example of the version of the file that is needed to integrate with
     "basePath": "app",
     "mainAppPath": "utils/request.js",
     "containerPaths": "containers,components",
-    "coreReducerFilenames": "actions.js,selectors.js",
-    "globalImportsOutputPath": "globalReducerImports.js",
+    "actionFilenames": "actions.js,selectors.js",
+    "globalReducersOutputPath": "globalReducerImports.js",
+    "ignorePaths": "-spec",
     "reducerMapOutputPath": "reducerMap.js",
     "reduxPaths": "containers",
     "sagaFilename": "sagas.js"
@@ -170,6 +171,9 @@ export default function createRoutes(store) {
 That's right - all you need to do to implement react-router's getComponent call is specify the path to the component!
 All of the necessary Redux modules and the React component itself will be injected automatically on route change by
 `getCompoenntFromReduxMapper`, using the data collected by the build tool.
+
+<h3>For more information, see the full, more detailed integration guide
+[here](https://github.com/paulbrom/hmr-redux-mapper/blob/master/docs/Integration_Guide.md)</h3>
 
 <h2>Contributing</h2>
 
