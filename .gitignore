@@ -8,3 +8,5 @@ mapper-tool/tests/data/simple-separated/results/globalReducers.js
 mapper-tool/tests/data/simple-separated/results/reducerMap.js
 mapper-tool/tests/data/complex-separated/results/globalReducers.js
 mapper-tool/tests/data/complex-separated/results/reducerMap.js
+mapper-tool/tests/data/file-path-ignores/results/globalReducers.js
+mapper-tool/tests/data/file-path-ignores/results/reducerMap.js

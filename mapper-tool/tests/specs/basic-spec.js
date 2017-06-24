@@ -58,7 +58,7 @@ describe("Reducer detection test suite", function() {
   it(`find reducer usage in the ${TEST_FILE_PATH_IGNORES} test case`, function() {
     execHMRTool(TEST_FILE_PATH_IGNORES, {
       reduxSeparated: true,
-      otherArgs: ' -i "(-spec)|(ignoreFolder/)"',
+      otherArgs: ' -i "(-spec.js)|(ignoreFolder/)"',
     });
     expect(compareResults(TEST_FILE_PATH_IGNORES)).toBe(true);
   });

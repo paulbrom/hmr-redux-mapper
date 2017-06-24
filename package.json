@@ -47,9 +47,12 @@
     "vinyl-transform": "^1.0.0"
   },
   "keywords": [
-    "redux",
     "hmr",
-    "mapper"
+    "hot",
+    "mapper",
+    "module",
+    "redux",
+    "reload"
   ],
   "license": "MIT"
 }
