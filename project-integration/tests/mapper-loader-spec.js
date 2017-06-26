@@ -77,6 +77,7 @@ describe("Integration mapper loader test suite", () => {
       injectSagas: useCustomCallbacks ? injectSagasCustom : undefined,
       loadModule: useCustomCallbacks ? loadModuleCustom : undefined,
       errorLoading,
+      unitTest: true,
     });
   };
 

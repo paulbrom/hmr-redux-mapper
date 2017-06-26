@@ -56,7 +56,9 @@ const reduxMapperLoader = ({
   injectReducer,                // your implementation of injectAsyncReducer, optional
   injectSagas,                  // your implementation of injectSagas, optional
   loadModule,                   // your implementation of loadModule, optional
-  errorLoading = (err) => {}    // your implementation of an error handler, optional
+  errorLoading = (err) => {},   // your implementation of an error handler, optional
+  unitTest,                     // only true if unit testing
+  debug,                        // only true if debugging
 }) => {
   // see if we should use default implementations for injectReducer/injectSagas/loadModule
   const loadModuleDefault = (cb) => (componentModule) => {
@@ -82,27 +84,42 @@ const reduxMapperLoader = ({
   // you only need to provide the path to the component module
   const getComponentFromReduxMapper = componentPath =>
     (nextState, cb) => {
-      return new Promise((resolve, reject) => {
+      const componentResolver = (resolve = () => {}, reject = () => {}) => {
         // get the component from the mapper file
         const componentMap = reducerMap.containerSpecific[componentPath];
         if (componentMap) {
+          if (debug) {
+            console.log('[reduxMapperLoader] found component:', componentPath);
+          }
           // create a promise to load each reducer, as well as a promise to load the component itself
           Promise.all(_reduce(componentMap.reducers, (imports, reducerCur) => {
+            if (debug) {
+              console.log('[reduxMapperLoader] found reducer:', reducerCur.reducerName);
+            }
             imports.push(reducerCur.importFunc());
             if (reducerCur.sagaImportFunc) {
               imports.push(reducerCur.sagaImportFunc());
             }
             return imports;
           }, []).concat([componentMap.importFunc()])).then(promiseResults => {
+            if (debug) {
+              console.log('[reduxMapperLoader] all promises loaded:', componentPath);
+            }
             // once all promises are loaded, inject all reducers/sagas
             let resultOn = 0;
             _each(componentMap.reducers, reducerCur => {
+              if (debug) {
+                console.log('[reduxMapperLoader] injecting reducer:', reducerCur.reducerName);
+              }
               injectReducer(reducerCur.reducerName, promiseResults[resultOn++].default);
               if (reducerCur.sagaImportFunc) {
                 injectSagas(promiseResults[resultOn++].default);
               }
             });
             // finally, load and render the route
+            if (debug) {
+              console.log('++ about to call loadModule:', componentPath);
+            }
             loadModule(cb)(_last(promiseResults));
             resolve();
           }).catch((err) => {
@@ -114,7 +131,14 @@ const reduxMapperLoader = ({
           errorLoading(err);
           reject(err);
         }
-      });
+      };
+
+      if (unitTest) {
+        return new Promise((resolve, reject) =>
+          componentResolver(resolve, reject));
+      } else {
+        return componentResolver();
+      }
     };
   return getComponentFromReduxMapper;
 };
