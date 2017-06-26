@@ -1,5 +1,4 @@
 node_modules
-dist
 .idea/
 .tmp/
 mapper-tool/tests/data/simple-combined/results/globalReducers.js
