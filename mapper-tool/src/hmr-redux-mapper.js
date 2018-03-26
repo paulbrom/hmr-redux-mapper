@@ -140,9 +140,16 @@ const COMMAND_LINE_ARGS = [
   },
   {
     name: 'verboseLogging',
-    alias: 'v', type: Boolean,
+    alias: 'v',
+    type: Boolean,
     defaultValue: false,
     description: '(optional) turns on verbose logging (for debugging purposes)',
+  },
+  {
+    name: 'systemImportCall',
+    alias: 'y',
+    type: String,
+    description: '(optional) use -y import to specify import() instead of System.import() in reducerMap.js',
   },
 ];
 
@@ -395,12 +402,13 @@ class HMR_ReduxMapper {
         const hasSagas = sagaFilename && fs.existsSync(sagaPath);
         const sagaPathMunged = sagaFilename &&
           sagaPath.replace(this._getBasePath(path.dirname(this._opts.reducerMapOutputPath)), '.');
+        const importUse = (this._opts.systemImportCall || 'System.import');
         reducers.push({
           reducerName,
           reducerRootPath: path.dirname(fileCur),
           reducerPath: reducerPathMunged,
-          importFunc: `$$function() { return System.import('${this._forceUnixPath(this._trimExtension(reducerPathMunged))}'); }$$`,
-          sagaImportFunc: hasSagas ? `$$function() { return System.import('${this._forceUnixPath(this._trimExtension(sagaPathMunged))}'); }$$` : undefined,
+          importFunc: `$$function() { return ${importUse}('${this._forceUnixPath(this._trimExtension(reducerPathMunged))}'); }$$`,
+          sagaImportFunc: hasSagas ? `$$function() { return ${importUse}('${this._forceUnixPath(this._trimExtension(sagaPathMunged))}'); }$$` : undefined,
         });
       }
     });
@@ -578,6 +586,7 @@ class HMR_ReduxMapper {
   // this method scans the given folder and all subfolders for reducer usage
   _scanForReducerUsageInFolder(folder) {
     const reducersUsed = {};
+    const importUse = (this._opts.systemImportCall || 'System.import');
     this._execOnAllFilesRecursive(folder, fileCur => {
       const fileCurMunged = fileCur.replace(this._opts.basePath, '.');
       const ignorePath = fileCurMunged.match(REGEX_IGNORE_PATHS);
@@ -586,7 +595,7 @@ class HMR_ReduxMapper {
         shouldIgnore || fileCurMunged.match(`${extCur}$`), false);
       if (!ignorePath && !isTestFilename && !ignoreExtension) {
         reducersUsed[fileCurMunged] = {
-          importFunc: `$$function() { return System.import('${this._forceUnixPath(this._trimExtension(fileCurMunged))}'); }$$`,
+          importFunc: `$$function() { return ${importUse}('${this._forceUnixPath(this._trimExtension(fileCurMunged))}'); }$$`,
           reducers: this._sortAndMapReducers(this._scanForReducerUsageInFile(fileCur)),
         };
       }
